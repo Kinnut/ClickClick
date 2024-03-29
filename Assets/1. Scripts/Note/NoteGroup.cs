@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class NoteGroup : MonoBehaviour
@@ -8,6 +9,11 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private GameObject notePref;
     [SerializeField] private GameObject noteSpawn;
     [SerializeField] private float noteGap = 6;
+
+    [SerializeField] private SpriteRenderer btnSpriteRenderer;
+    [SerializeField] private Sprite normalBtnSprite;
+    [SerializeField] private Sprite selectBtnSprite;
+    [SerializeField] private Animation anim;
 
 
     private List<Note> noteList = new List<Note>();
@@ -23,5 +29,16 @@ public class NoteGroup : MonoBehaviour
 
             noteList.Add(note);
         }
+    }
+
+    public void OnInPut(bool y)
+    {
+        anim.Play();
+        btnSpriteRenderer.sprite = selectBtnSprite;
+    }
+
+    public void CallAniDone()
+    {
+        btnSpriteRenderer.sprite = normalBtnSprite;
     }
 }
