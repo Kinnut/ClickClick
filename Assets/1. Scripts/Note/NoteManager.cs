@@ -16,14 +16,23 @@ public class NoteManager : MonoBehaviour
 
     public void OnInput(KeyCode keycode)
     {
-        if (keycode == KeyCode.A)
+        int randld = Random.Range(0, noteGroupArr.Length);
+        bool isApple = randld == 0 ? true : false;
+
+        foreach (NoteGroup noteGroup in noteGroupArr)
         {
-            noteGroupArr[0].OnInPut(true);
+            if (keycode == noteGroup.KeyCode) 
+            {
+                noteGroup.OnInPut(isApple);
+            }
         }
 
-        if (keycode == KeyCode.S)
-        {
-            noteGroupArr[1].OnInPut(true);
-        }
+
+        if (keycode == KeyCode.A)
+            noteGroupArr[0].OnInPut(isApple);
+        else if (keycode == KeyCode.S)
+            noteGroupArr[1].OnInPut(isApple);
+        else if (keycode == KeyCode.D)
+            noteGroupArr[2].OnInPut(isApple);
     }
 }
