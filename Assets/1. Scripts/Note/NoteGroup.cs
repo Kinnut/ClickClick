@@ -37,8 +37,10 @@ public class NoteGroup : MonoBehaviour
     private void SpawnNote(bool isApple)
     {
         GameObject noteGameObj = Instantiate(notePref);
+
         noteGameObj.transform.SetParent(noteSpawn.transform);
         noteGameObj.transform.localPosition = Vector3.up * noteList.Count * noteGap;
+
         Note note = noteGameObj.GetComponent<Note>();
         note.SetSprite(isApple);
 
@@ -50,14 +52,14 @@ public class NoteGroup : MonoBehaviour
         if (noteList.Count == 0)
             return;
 
-        SpawnNote(isApple);
-
         Note delNote = noteList[0];
-        delNote.Destroy();
+        delNote.DeleteNote();
         noteList.RemoveAt(0);
 
         for (int i = 0; i < noteList.Count; i++)
             noteList[i].transform.localPosition = Vector3.up * i * noteGap;
+
+        SpawnNote(isApple);
 
         anim.Play();
         btnSpriteRenderer.sprite = selectBtnSprite;
