@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class NoteGroup : MonoBehaviour
 {
+
     [SerializeField] private int noteMaxNum = 5;
     [SerializeField] private GameObject notePref;
     [SerializeField] private GameObject noteSpawn;
@@ -15,7 +18,8 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private Sprite normalBtnSprite;
     [SerializeField] private Sprite selectBtnSprite;
     [SerializeField] private Animation anim;
-    [SerializeField] private KeyCode keyCode;
+    [SerializeField] private TextMeshPro keyCodeTMp;
+    private KeyCode keyCode;
 
     private List<Note> noteList = new List<Note>();
 
@@ -25,16 +29,20 @@ public class NoteGroup : MonoBehaviour
         return keyCode;}
     }
 
-
-    void Start()
+    public void Create(KeyCode _Keycode)
     {
+        this.keyCode = _Keycode;
+        keyCodeTMp.text = _Keycode.ToString();
+
         for (int i = 0; i < noteMaxNum; i++)
         {
-            SpawnNote(true);
+            CreateNote(true);
         }
+
+        InputManager.instance.AddKeyCode(keyCode);
     }
 
-    private void SpawnNote(bool isApple)
+    private void CreateNote(bool isApple)
     {
         GameObject noteGameObj = Instantiate(notePref);
 
@@ -59,7 +67,7 @@ public class NoteGroup : MonoBehaviour
         for (int i = 0; i < noteList.Count; i++)
             noteList[i].transform.localPosition = Vector3.up * i * noteGap;
 
-        SpawnNote(isApple);
+        CreateNote(isApple);
 
         anim.Play();
         btnSpriteRenderer.sprite = selectBtnSprite;

@@ -6,14 +6,14 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    public static UIManager instance;
 
     [SerializeField] private Image scoreImg;
     [SerializeField] private TextMeshProUGUI scoreTmp;
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     public void OnScoreChange(int currentScore, int maxScore)

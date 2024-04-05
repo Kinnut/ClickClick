@@ -6,21 +6,27 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
 
+    private List<KeyCode> keyCodeList = new List<KeyCode>();
+
     private void Awake()
     {
         instance = this;
     }
 
+    public void AddKeyCode(KeyCode _keyCode)
+    {
+        this.keyCodeList.Add(_keyCode);
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-            NoteManager.instance.OnInput(KeyCode.A);
-
-        if (Input.GetKeyDown(KeyCode.S))
-            NoteManager.instance.OnInput(KeyCode.S);
-
-        if (Input.GetKeyDown(KeyCode.D))
-            NoteManager.instance.OnInput(KeyCode.D);
+        foreach (KeyCode keyCode in this.keyCodeList)
+        {
+            if (Input.GetKeyDown(keyCode) == true)
+            {
+                NoteManager.instance.OnInput(keyCode);
+            }
+        }
     }
 }
 

@@ -337,7 +337,11 @@ MonoBehaviour:
   notePref: {fileID: 4929362589525153628, guid: 5f178b34551a7d0449a0d53cded7389d, type: 3}
   noteSpawn: {fileID: 2999352213120934271}
   noteGap: 6.5
+  btnSpriteRenderer: {fileID: 8045122824477511588}
+  normalBtnSprite: {fileID: 21300000, guid: d7b61edc0b017174095824530172ad1f, type: 3}
+  selectBtnSprite: {fileID: 21300000, guid: 4fce3950ae84d9c46a154454c898bf17, type: 3}
   anim: {fileID: 3112865376481268137}
+  keyCodeTMp: {fileID: 1373633678172093549}
 --- !u!111 &3112865376481268137
 Animation:
   m_ObjectHideFlags: 0
@@ -453,7 +457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: S
+  m_text: A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
