@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class NoteManager : MonoBehaviour
@@ -35,6 +34,9 @@ public class NoteManager : MonoBehaviour
     public void CreateNoteGroup()
     {
         int noteGroupCount = noteGroupList.Count;
+        if (wholeKeyCodesArr.Length <= noteGroupCount)
+            return;
+
         KeyCode keycode = this.wholeKeyCodesArr[noteGroupCount];
         CreateNoteGroup(keycode);
     }
