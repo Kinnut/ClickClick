@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 1.1003433e-15
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 837957507
 --- !u!4 &137333223 stripped
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 7.259404e-11
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 788248300
 --- !u!4 &951737958 stripped
@@ -733,8 +733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 4.0129866e-12
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 735196476
 --- !u!1 &1161604244 stripped
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 2.9092094e-34
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 726947607
 --- !u!1 &1319955750 stripped
@@ -801,8 +801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 2.1076968e-37
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 320233537
 --- !u!1 &1387450573 stripped
@@ -822,8 +822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 0.0000005011244
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 135552204
 --- !u!1 &1414009670 stripped
@@ -843,8 +843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 1.1783498e-10
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 1065998465
 --- !u!4 &1422324095 stripped
@@ -1059,6 +1059,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 633d7b45f5707384ca9fade255a38a20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603500803}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 633d7b45f5707384ca9fade255a38a20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603500804}
     - targetCorrespondingSourceObject: {fileID: -2288948291297355851, guid: 633d7b45f5707384ca9fade255a38a20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1647809908}
@@ -1221,8 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 2.42095e-38
+  m_labelHash: 2.0398354e-19
   m_SpriteKey: 0
   m_SpriteHash: 122523132
 --- !u!1 &1603500799 stripped
@@ -1302,6 +1305,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: cfb2a2b5457cbb84fb3f4f0c5c7c0e5b, type: 3}
+--- !u!114 &1603500804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603500799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2b85a9a06d7ee4994474de6d3a4bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1645001397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 913483112064060883, guid: 633d7b45f5707384ca9fade255a38a20, type: 3}
