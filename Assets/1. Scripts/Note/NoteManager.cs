@@ -54,7 +54,7 @@ public class NoteManager : MonoBehaviour
 
     public void OnInput(KeyCode keycode)
     {
-        int randld = Random.Range(0, noteGroupList.Count);
+        int randld = Random.Range(0, 2);
         bool isApple = randld == 0 ? true : false;
 
         foreach (NoteGroup noteGroup in noteGroupList)

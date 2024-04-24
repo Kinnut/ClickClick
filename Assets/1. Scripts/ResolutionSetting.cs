@@ -33,11 +33,28 @@ public class ResolutionSetting : MonoBehaviour
 
     void InitUI()
     {
-        for (int i = 0; i < Screen.resolutions.Length; i++)
+        resolutions.Clear();
+
+        foreach (Resolution res in Screen.resolutions)
         {
-            if (Screen.resolutions[i].refreshRate == 60)
-                resolutions.Add(Screen.resolutions[i]);
+            if (res.refreshRate == 60)
+            {
+                resolutions.Add(res);
+
+                if (res.width == 1200 && res.height == 600)
+                    break;
+            }
         }
+
+        if (!resolutions.Exists(r => r.width == 1200 && r.height == 600))
+        {
+            Resolution customRes = new Resolution();
+            customRes.width = 1200;
+            customRes.height = 600;
+            customRes.refreshRate = 60;
+            resolutions.Add(customRes);
+        }
+
         resolutionDropdown.options.Clear();
 
         int optionNum = 0;
@@ -49,11 +66,13 @@ public class ResolutionSetting : MonoBehaviour
 
             if (item.width == Screen.width && item.height == Screen.height)
                 resolutionDropdown.value = optionNum;
+
             optionNum++;
         }
+
         resolutionDropdown.RefreshShownValue();
 
-        fullscreenBtn.isOn = Screen.fullScreenMode.Equals(FullScreenMode.FullScreenWindow) ? true : false;
+        fullscreenBtn.isOn = Screen.fullScreenMode.Equals(FullScreenMode.FullScreenWindow);
     }
 
     public void DropboxOptionChange(int x)
