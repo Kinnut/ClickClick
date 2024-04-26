@@ -10,8 +10,6 @@ public class ResolutionSetting : MonoBehaviour
 
     FullScreenMode screenMode;
 
-    public GameObject panel;
-
     public TMP_Dropdown resolutionDropdown;
     public Toggle fullscreenBtn;
 
@@ -20,15 +18,6 @@ public class ResolutionSetting : MonoBehaviour
     void Start()
     {
         InitUI();
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            panel.SetActive(true);
-            Time.timeScale = 0;
-        }
     }
 
     void InitUI()
@@ -88,8 +77,6 @@ public class ResolutionSetting : MonoBehaviour
     public void CheckBtn()
     {
         Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
-        panel.SetActive(false);
         Time.timeScale = 1;
     }
-
 }

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject setting;
+
     public static GameManager instance;
 
     [SerializeField] private int maxScore;

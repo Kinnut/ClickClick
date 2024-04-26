@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class KeyManager : MonoBehaviour
 {
-    public static InputManager instance;
+    public static KeyManager instance;
 
     private List<KeyCode> keyCodeList = new List<KeyCode>();
 

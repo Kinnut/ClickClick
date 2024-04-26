@@ -36,7 +36,7 @@ public class NoteGroup : MonoBehaviour
             CreateNote(true);
         }
 
-        InputManager.instance.AddKeyCode(keyCode);
+        KeyManager.instance.AddKeyCode(keyCode);
     }
 
     private void CreateNote(bool isApple)
