@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/0. Scene/1. MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/0. Scene/2. ClearScene.unity
+    guid: aa1a1d353230e5a418149a2bcfdc9b11
+  - enabled: 1
     path: Assets/0. Scene/2. EndingScene.unity
     guid: 58c173adb4bed974783a71aa5646e36c
   m_configObjects: {}

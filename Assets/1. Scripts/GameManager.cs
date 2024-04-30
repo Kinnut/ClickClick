@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject setting;
-
     public static GameManager instance;
 
     [SerializeField] private int maxScore;
@@ -18,11 +17,14 @@ public class GameManager : MonoBehaviour
     private int nextNoteGroupUnlockCnt;
 
     [SerializeField] private float maxTime = 30f;
+    public float myTime = 0;
 
     private void Start()
     {
         UIManager.instance.OnScoreChange(this.score, maxScore);
         NoteManager.instance.Create();
+
+        DontDestroyOnLoad(gameObject);
 
         StartCoroutine(TimerCoroutine());
     }
@@ -35,9 +37,10 @@ public class GameManager : MonoBehaviour
         {
             currentTime += Time.deltaTime;
             UIManager.instance.OnTimerChange(currentTime, maxTime);
+            myTime = currentTime;
             yield return null;
         }
-
+        
         SceneManager.LoadScene("2. EndingScene");
     }
 

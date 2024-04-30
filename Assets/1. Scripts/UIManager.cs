@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreTmp;
 
     [SerializeField] private Image timerImg;
-    [SerializeField] private TextMeshProUGUI timerTmp;
+    public TextMeshProUGUI timerTmp;
 
     public void OnScoreChange(int currentScore, int maxScore)
     {

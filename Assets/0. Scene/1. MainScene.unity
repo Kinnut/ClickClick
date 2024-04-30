@@ -1508,10 +1508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560bfe5c55b033749bd1b10b77f43344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setting: {fileID: 0}
-  maxScore: 100
+  maxScore: 30
   noteGroupCreateScore: 10
   maxTime: 30
+  myTime: 0
 --- !u!1 &589813867
 GameObject:
   m_ObjectHideFlags: 0
